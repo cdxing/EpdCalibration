@@ -55,13 +55,16 @@ If you want to get the latest version of codes from GitHub:
 git pull
 ```
 7.Git: “please tell me who you are” error
-I use Atom editor to connect with GitHub. There's a link in the reference if you are interested in using Atom. This is an error that I came across when I use Atom editor to do the initial commit, the solution is:
+--------------------------
+- I use Atom editor to connect with GitHub. There's a link in the reference if you are interested in using Atom. This is an error that I came across when I use Atom editor to do the initial commit, the solution is:
 ```
 git init
 git config user.name "someone"
 git config user.email "someone@someplace.com"
 ```
+- The good thing for Atom is that you don't need to type Git commands to do  Git stuff or type your Username and password every time you commit a change.
 8.References
+--------------------------
 - How to connect Github with Atom - Easiest Way! https://www.youtube.com/watch?time_continue=403&v=6HsZMl-qV5k&feature=emb_logo
 - Basic Branching and Merging https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 - git-please-tell-me-who-you-are-error https://stackoverflow.com/questions/11656761/git-please-tell-me-who-you-are-error
