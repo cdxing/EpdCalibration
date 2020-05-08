@@ -62,7 +62,7 @@ git init
 git config user.name "someone"
 git config user.email "someone@someplace.com"
 ```
-- The good thing for Atom is that you don't need to type Git commands to do  Git stuff or type your Username and password every time you commit a change.
+- The good thing of Atom is that you don't need to type Git commands to do the git stuff.
 8.References
 --------------------------
 - How to connect Github with Atom - Easiest Way! https://www.youtube.com/watch?time_continue=403&v=6HsZMl-qV5k&feature=emb_logo
