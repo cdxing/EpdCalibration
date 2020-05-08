@@ -1,0 +1,12 @@
+*.o
+*.root
+*.so
+*.pcm
+*_Dict.cxx
+*.dat
+*.txt
+*.pdf
+*.d
+StRoot
+NewHitograms
+7.7GeV
