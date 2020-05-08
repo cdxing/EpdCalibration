@@ -56,7 +56,7 @@ git pull
 ```
 7.Git: “please tell me who you are” error
 --------------------------
-- I use Atom editor to connect with GitHub. There's a link in the reference if you are interested in using Atom. This is an error that I came across when I use Atom editor to do the initial commit, the solution is:
+- I use Atom editor to connect with GitHub. The good thing of Atom is that you don't need to type git commands to do the git stuff. There's a link in the reference if you are interested in using Atom. This is an error that I came across when I use Atom editor to do the initial commit, the solution is:
 ```
 git init
 git config user.name "someone"
