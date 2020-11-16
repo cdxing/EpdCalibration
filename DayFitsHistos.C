@@ -185,7 +185,8 @@ for (int i = 0; i < 2; ++i)
       tChi2[i][j][k] = r->Chi2()/r->Ndf();
       Double_t Ave  = r->Value(0);
       Double_t aErr = r->ParError(0);
-      NmipFile << Form("%d \t%d \t%d \t%d \t%lf",dayStart,ew,pp,tt,Ave);
+      NmipFile << Form("%d \t%d \t%d \t%d \t%lf \t0.0",dayStart,ew,pp,tt,Ave);
+      // NmipFile << Form("%d \t%d \t%d \t%d \t%lf",dayStart,ew,pp,tt,Ave);
       NmipFile << endl;
       tAve[i][j][k] = Ave;
       tAveErr[i][j][k] = aErr;
