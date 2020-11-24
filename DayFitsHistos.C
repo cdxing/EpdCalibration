@@ -9,6 +9,10 @@ any trends of drift from an average value over
 the days.
 
 -Skipper Kagamaster
+
+Update: Calibration for Run20 7.7 GeV FXT
+Author: Ding Chen
+Date: Nov. 23, 2020
 */
 
 /// C++ Headers
@@ -23,7 +27,7 @@ the days.
 #include "TMath.h"
 #include "TTree.h"
 
-void DayFitsHistos(const Char_t *inFile = "NmipConstantAll.txt")
+void DayFitsHistos(const Char_t *inFile = "NmipConstantAll_R20_7p7_Fxt_index.txt")
 {
 
 /// This is what I'll want to do for saving; I need to define day.
@@ -35,10 +39,10 @@ Double_t tAveErr[2][12][31];
 Double_t tChi2[2][12][31];
 Int_t day, ew, pp, tt, days, total;
 Double_t adc, err, ey;
-int runStart = 155;
-int runEnd = 173;
-int dayStart = 171;
-int dayEnd = 173;
+int runStart = 1;
+int runEnd = 36;
+int dayStart = 1;
+int dayEnd = 36;
 int daysUsed = dayEnd-dayStart+1;
 // if ((dayStart>109)&&(dayStart<116))
 // {
@@ -57,11 +61,11 @@ int daysUsed = dayEnd-dayStart+1;
 //   daysUsed -= 2;
 // }
 days = runEnd-runStart+1;
-int runTotal = 4464*(days);
+int runTotal = 4464*(days)/2;
 double data[runTotal];
 Double_t nMipADC[days][2][12][31];
 Double_t nMipError[days][2][12][31];
-std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result/Nmip_Day_%d.txt",dayStart),ofstream::out);
+std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/Nmip_Day_%d.txt",dayStart),ofstream::out);
 //double data[4464];
 
 /// This bit of code is to read the text file and give ROOT some usable data.
@@ -108,7 +112,7 @@ std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result/Nmi
 /// Histograms to show the ADC variance by day/tile.
 TH2D *hADCDelta[24];
 
-for (int i = 0; i < 2; ++i)
+for (int i = 0; i < 1; ++i) // only east side
 {
   for (int j = 0; j < 12; ++j)
   {
@@ -124,7 +128,7 @@ TCanvas *c1 = new TCanvas("c1","Day vs 1st nMip",490,175,1332,799);
 /// Use this to divide the canvas.
 	//c1->Divide(4,8,0,0);
 TGraphErrors* gr[31]; //= new TGraphErrors();
-for (int i = 0; i < 2; ++i)
+for (int i = 0; i < 1; ++i) // only east side
 {
   ew = i;
   for (int j = 0; j < 12; ++j)
@@ -162,7 +166,7 @@ for (int i = 0; i < 2; ++i)
         }
 
       /// Just some graphing nonsense.
-      gr[k]->GetXaxis()->SetTitle("Day");
+      gr[k]->GetXaxis()->SetTitle("Run serial number");
       gr[k]->GetXaxis()->CenterTitle(true);
       gr[k]->GetXaxis()->SetNdivisions(310);
       gr[k]->GetXaxis()->SetLabelFont(42);
@@ -195,7 +199,7 @@ for (int i = 0; i < 2; ++i)
 }
 
 /// Loop to fill the histograms.
-for (int i = 0; i < 2; ++i)
+for (int i = 0; i < 1; ++i) // only east side
 {
   ew = i;
   for (int j = 0; j < 12; ++j)
@@ -251,16 +255,16 @@ for (int i = 0; i < 2; ++i)
   }
 }
 TCanvas *c2 = new TCanvas("c2","Average per Tile",490,175,1332,799);
-c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result/ADCDelta_%d_%d.pdf[",dayStart,dayEnd));
-for (int i = 0; i < 2; ++i)
+c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ADCDelta_%d_%d.pdf[",dayStart,dayEnd));
+for (int i = 0; i < 1; ++i) // only east side
 {
   for (int j = 0; j < 12; ++j)
   {
     int l = j + i*12;
     hADCDelta[l]->SetStats(kFALSE);
     hADCDelta[l]->Draw("colz");
-    c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result/ADCDelta_%d_%d.pdf",dayStart,dayEnd));
+    c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ADCDelta_%d_%d.pdf",dayStart,dayEnd));
   }
 }
-c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result/ADCDelta_%d_%d.pdf]",dayStart,dayEnd));
+c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ADCDelta_%d_%d.pdf]",dayStart,dayEnd));
 }

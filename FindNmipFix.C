@@ -3,6 +3,10 @@
  * Update: Rebin
  * Author: Ding Chen
  * Date : Feb 28, 2020
+ *
+ * Update: Day => Run
+ * Author: Ding Chen
+ * Date : Nov 20, 2020
  */
 
 #include <fstream>      // std::filebuf
@@ -20,12 +24,12 @@ void FindNmipFix(){
   gStyle->SetOptTitle(1);
   c1->SaveAs("ADCspectraFix.pdf[");
 
-  bool dayQuit = 0;
-  while(dayQuit == 0)
+  bool runQuit = 0;
+  while(runQuit == 0)
   {
-    cout << "Enter the day to be refit: ";
-    int day;
-    cin >> day;
+    cout << "Enter the run to be refit: ";
+    int run;
+    cin >> run;
 
     gStyle->SetOptStat(0);
     gStyle->SetTitleSize(0.1,"t");
@@ -55,7 +59,8 @@ void FindNmipFix(){
     func->SetParameter(nMipsMax,SingleMipPeakStartingValue);
     func->SetLineWidth(3);
 
-    TFile* in = new TFile(Form("./NewHitograms/New_ROOT_Files/Day%d.root",day),"READ");
+    TFile* in = new TFile(Form(
+              "./Histrograms_R20_7p7_FXT/st_physics_adc_%d_raw.picoDst.root",run),"READ");
 
 /// Here's where we fix each tile.
     bool ewQuit = 0;
@@ -81,11 +86,11 @@ void FindNmipFix(){
           cout << "Which tile?" << endl << "TT: ";
           int TT;
           cin >> TT;
-          // title = new TPaveLabel(.11,.95,.35,.99,Form("Day%dAdcEW%dPP%dTT%d",day,ew,PP,TT),"brndc");
+          // title = new TPaveLabel(.11,.95,.35,.99,Form("Run%dAdcEW%dPP%dTT%d",run,ew,PP,TT),"brndc");
           gStyle->SetOptStat(kFALSE);
           cout << "EW:PP:TT = " << ew << ":" << PP << ":" << TT << endl;
           TH1D* adc = (TH1D*)in->Get(Form("AdcEW%dPP%dTT%d",ew,PP,TT));
-        	adc->SetTitle(Form("Day%d %s PP%02d TT%02d",day,EWstring[ew].Data(),PP,TT));
+        	adc->SetTitle(Form("Run%d %s PP%02d TT%02d",run,EWstring[ew].Data(),PP,TT));
           adc->Draw();
           // title->Draw("same");
 
@@ -212,7 +217,7 @@ void FindNmipFix(){
             if (fam == "y")
             {
               fitEnder += 1;
-              NmipFile << Form("%d \t%d \t%d \t%d \t%f \t%f",day,ew,PP,TT,nMipFound,nMipError);
+              NmipFile << Form("%d \t%d \t%d \t%d \t%f \t%f",run,ew,PP,TT,nMipFound,nMipError);
               NmipFile << endl;
 
               /// Display for single MIP fits.
@@ -267,7 +272,7 @@ void FindNmipFix(){
           ppQuit += 1;
         }
       }
-      cout << "Another side of STAR for this day? (y/n)";
+      cout << "Another side of STAR for this run? (y/n)";
       std::string sideFin;
       cin >> sideFin;
       if (sideFin == "n")
@@ -276,13 +281,13 @@ void FindNmipFix(){
       }
     }
 
-    cout << "Another day for this energy? (y/n)";
-    std::string dayFin;
-    cin >> dayFin;
-    if (dayFin == "n")
+    cout << "Another run for this energy? (y/n)";
+    std::string runFin;
+    cin >> runFin;
+    if (runFin == "n")
     {
       c1->SaveAs("ADCspectraFix.pdf]");
-      dayQuit += 1;
+      runQuit += 1;
       in->Close();
       NmipFile.close();
     }
