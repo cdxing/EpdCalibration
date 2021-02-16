@@ -5,9 +5,9 @@ TF1* MipPeak[nMipsMax]; // three MipPeak TF1
 Double_t myfunc(Double_t* x, Double_t* param);  // Fit Function used by Minuit
 
 
-void FindNmip(int run=21028011){
+void FindNmip(int run=22038){
 
-  gStyle->SetOptStat(0); // what is this style?
+  gStyle->SetOptStat(0);
 
   gStyle->SetTitleSize(0.2,"t");
 
@@ -53,9 +53,9 @@ void FindNmip(int run=21028011){
   theCanvas->SaveAs(
         Form("ADCspectraRun%d.pdf[",run));
   TFile* in = new TFile(Form(
-            "./Histrograms_R20_7p7_FXT/st_physics_adc_%d_raw.picoDst.root",run),"READ");
+            "./Histrograms_R21_7p7_COL/days/%d.root",run),"READ");
 
-  for (int ew=0; ew<1; ew++){ // only East side need to be calibrated for FXT
+  for (int ew=0; ew<2; ew++){ // only East side need to be calibrated for FXT
     for (int PP=1; PP<13; PP++){
       int iPad=0;
       theCanvas->cd(++iPad);
@@ -84,13 +84,13 @@ void FindNmip(int run=21028011){
         	if (TT<10){         // QT32C
         	  FitRangeLow=80;//100;//80;
         	  FitRangeHigh=16384;
-        	  SingleMipPeakStartingValue=134;//115;//140;//115;
+        	  SingleMipPeakStartingValue=120;//115;//140;//115;
         	  MaxPlot=600;
         	}
         	else{               // QT32B
          	   FitRangeLow=60;//75;//60;
          	   FitRangeHigh=16384;
-        	   SingleMipPeakStartingValue=90;//85;//110;//80;
+        	   SingleMipPeakStartingValue=80;//85;//110;//80;
         	   MaxPlot=400;
 
         	}

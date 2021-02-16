@@ -42,7 +42,7 @@ R__LOAD_LIBRARY(libStPicoDst)
 
 //_________________
 void RunAnalysis(const Char_t *inFile =
-  "./data/production_31p2GeV_fixedTarget_2020/ReversedFullField/dev/2020/028/st_physics_adc_21028011_raw.picoDst.root") {
+  "./data/production_7p7GeV_2021/feb7/picos/22038001.picoDst.root") {
 
   // try another way to load libraries
   // gSystem->Load("StRoot/StPicoEvent/libStPicoDst.so");
@@ -51,13 +51,13 @@ void RunAnalysis(const Char_t *inFile =
   std::string Queso = inFile;
   std::string Nachos = "Oh no!";
   Queso = Queso.substr( Queso.find_last_of('/')+1 ); // Queso ="st_physics_adc_21028011_raw_6000002.picoDst.root"
-  if (Queso.substr(15,1) == "2") // '1'
+  if (Queso.substr(0,1) == "2") // '1'
   {
-    Nachos = Queso.substr(17,3); // '028'
+    Nachos = Queso.substr(2,3); // '028'
   }
   else
   {
-    Nachos = Queso.substr(13,3); // '38_'
+    Nachos = Queso.substr(2,3); // '38_'
   }
   std::cout << Nachos << std::endl;
   int Tacos = stoi(Nachos); // 168
@@ -176,7 +176,7 @@ void RunAnalysis(const Char_t *inFile =
 
   if (Tacos < 100)
   {
-    TString pathSave = Form("./Day%d/",Tacos);
+    TString pathSave = Form("./Day0%d/",Tacos);
 
     TFile *MyFile = TFile::Open(pathSave+Queso,"RECREATE"); // "Day168st_mtd_19168038_raw_4000002.picoDst.root"
     MyFile->cd();

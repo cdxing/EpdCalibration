@@ -1,8 +1,5 @@
 #!/bin/bash
-    for i in ./data/production_31p2GeV_fixedTarget_2020/ReversedFullField/dev/2020/028/*.root; do
-        root -q -l -b "RunAnalysis.C("\""$i"\"")"
-    done &
-    for i in ./data/production_31p2GeV_fixedTarget_2020/ReversedFullField/dev/2020/029/*.root; do
+    for i in ./data/production_7p7GeV_2021/feb7/picos/*.root; do
         root -q -l -b "RunAnalysis.C("\""$i"\"")"
     done &
 
