@@ -137,11 +137,15 @@ void RunAnalysis(const Char_t *inFile =
 
     //hRefMult->Fill( event->refMult() );
 
-    //if (TMath::Abs(event->primaryVertex().z()) > 70.0 )
+    //if (TMath::Abs(event->primaryVertex().z()) > 40.0 )
     // {
     //  continue;
     // }
-
+    if (TMath::Abs( sqrt(pow(event->primaryVertex().x(),2) +
+      pow(event->primaryVertex().y(),2))) > 2.0 )
+    {
+      continue;
+    }
     /// Track analysis
 
     /*Int_t nTracks = dst->numberOfTracks();

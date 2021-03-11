@@ -84,13 +84,13 @@ void FindNmip(int run=66){
         	if (TT<10){         // QT32C
         	  FitRangeLow=80;//100;//80;
         	  FitRangeHigh=16384;
-        	  SingleMipPeakStartingValue=120;//115;//140;//115;
+        	  SingleMipPeakStartingValue=150;//115;//140;//115;
         	  MaxPlot=600;
         	}
         	else{               // QT32B
          	   FitRangeLow=60;//75;//60;
          	   FitRangeHigh=16384;
-        	   SingleMipPeakStartingValue=80;//85;//110;//80;
+        	   SingleMipPeakStartingValue=110;//85;//110;//80;
         	   MaxPlot=400;
 
         	}
