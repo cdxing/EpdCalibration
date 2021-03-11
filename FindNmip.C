@@ -5,14 +5,14 @@ TF1* MipPeak[nMipsMax]; // three MipPeak TF1
 Double_t myfunc(Double_t* x, Double_t* param);  // Fit Function used by Minuit
 
 
-void FindNmip(int run=22038){
+void FindNmip(int run=66){
 
   gStyle->SetOptStat(0);
 
   gStyle->SetTitleSize(0.2,"t");
 
   std::ofstream NmipFile(Form(
-    "NmipConstantsRun%d.txt",run),ofstream::out);
+    "NmipConstantsDay%d.txt",run),ofstream::out);
 
   Float_t SingleMipPeakStartingValue,FitRangeLow,FitRangeHigh;
   FitRangeHigh               = 700.0;  // high edge of range along the x-axis
@@ -51,7 +51,7 @@ void FindNmip(int run=22038){
   TCanvas* theCanvas = new TCanvas("ADCs","ADCs",1400,2400);
   theCanvas->Divide(4,8);
   theCanvas->SaveAs(
-        Form("ADCspectraRun%d.pdf[",run));
+        Form("ADCspectraDay%d.pdf[",run));
   TFile* in = new TFile(Form(
             "./Histrograms_R21_7p7_COL/days/%d.root",run),"READ");
 
@@ -137,13 +137,13 @@ void FindNmip(int run=22038){
 
         }
       theCanvas->SaveAs(
-        Form("ADCspectraRun%d.pdf",run));
+        Form("ADCspectraDay%d.pdf",run));
       label->Delete();
     }
   }
   in->Close();
   theCanvas->SaveAs(
-    Form("ADCspectraRun%d.pdf]",run));
+    Form("ADCspectraDay%d.pdf]",run));
   NmipFile.close();
 }
 
