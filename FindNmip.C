@@ -5,7 +5,7 @@ TF1* MipPeak[nMipsMax]; // three MipPeak TF1
 Double_t myfunc(Double_t* x, Double_t* param);  // Fit Function used by Minuit
 
 
-void FindNmip(int run=66){
+void FindNmip(int run=67){
 
   gStyle->SetOptStat(0);
 
