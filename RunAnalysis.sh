@@ -1,5 +1,5 @@
 #!/bin/bash
-	day=66
+	day=67
 
 	#Fix day for output
 	Day=$day
