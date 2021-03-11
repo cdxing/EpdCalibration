@@ -55,8 +55,8 @@ void FindNmip(int run=22038){
   TFile* in = new TFile(Form(
             "./Histrograms_R21_7p7_COL/days/%d.root",run),"READ");
 
-  for (int ew=0; ew<2; ew++){ // only East side need to be calibrated for FXT
-    for (int PP=1; PP<13; PP++){
+  for (int ew=1; ew<2; ew++){ // only East side need to be calibrated for FXT
+    for (int PP=8; PP<9; PP++){
       int iPad=0;
       theCanvas->cd(++iPad);
       TPaveText* label = new TPaveText(0.2,0.3,0.8,0.9);
@@ -82,15 +82,15 @@ void FindNmip(int run=22038){
           /// be where the first peak is.
           /// -sk
         	if (TT<10){         // QT32C
-        	  FitRangeLow=80;//100;//80;
+        	  FitRangeLow=15;//80;//100;//80;
         	  FitRangeHigh=16384;
-        	  SingleMipPeakStartingValue=120;//115;//140;//115;
+        	  SingleMipPeakStartingValue=30;//120;//115;//140;//115;
         	  MaxPlot=600;
         	}
         	else{               // QT32B
-         	   FitRangeLow=60;//75;//60;
+         	   FitRangeLow=15;//55;//75;//60;
          	   FitRangeHigh=16384;
-        	   SingleMipPeakStartingValue=80;//85;//110;//80;
+        	   SingleMipPeakStartingValue=30;//80;//85;//110;//80;
         	   MaxPlot=400;
 
         	}

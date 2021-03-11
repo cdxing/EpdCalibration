@@ -4,7 +4,7 @@
 TF1* MipPeak[nMipsMax];
 Double_t myfunc(Double_t* x, Double_t* param);  // Fit function used by Minuit.
 
-void FindNmipTest(int day=154){
+void FindNmipTest(int day=22038){
 
   gStyle->SetOptStat(0);
 
@@ -47,7 +47,7 @@ void FindNmipTest(int day=154){
   theCanvas->SaveAs(
         Form("ADCspectraTestDay%d.pdf[",day));
   TFile* in = new TFile(Form(
-            "./NewHitograms/Day%d.root",day),"READ");
+            "./Histrograms_R21_7p7_COL/days/%d.root",day),"READ");
 
   for (int ew=0; ew<2; ew++){
     for (int PP=1; PP<13; PP++){

@@ -1,5 +1,5 @@
 #!/bin/bash
-root -q -l -b "FindNmip.C(22038)" &
+# root -q -l -b "FindNmip.C(22038)" &
 root -q -l -b "FindNmip.C(22039)" &
 root -q -l -b "FindNmip.C(22040)" &
 root -q -l -b "FindNmip.C(22041)" &

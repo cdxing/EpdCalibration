@@ -23,7 +23,7 @@ the days.
 #include "TMath.h"
 #include "TTree.h"
 
-void DayHistos(const Char_t *inFile = "NmipConstantAll_R20_7p7_Fxt_index.txt")
+void DayHistos(const Char_t *inFile = "NMipConstAll_R21_7p7_COL_day.txt")
 {
 
 /// This is what I'll want to do for saving; I need to define day.
@@ -35,16 +35,16 @@ Double_t tAveErr[2][12][31];
 Double_t tChi2[2][12][31];
 Int_t day, ew, pp, tt, days, total;
 Double_t adc, err, ey;
-int runStart = 1;
-int runEnd = 36;
-int dayStart = 1;
-int dayEnd = 36;
+int runStart = 22038;
+int runEnd = 22044;
+int dayStart = 22038;
+int dayEnd = 22044;
 days = runEnd-runStart+1;
-int runTotal = 4464*(days)/2;//only East side
+int runTotal = 4464*(days);//only East side
 double data[runTotal];
 Double_t nMipADC[days][2][12][31];
 Double_t nMipError[days][2][12][31];
-std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/Nmip_Day_%d.txt",dayStart),ofstream::out);
+std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R21_7p7_COL/Nmip_Day_%d.txt",dayStart),ofstream::out);
 //double data[4464];
 
 /// This bit of code is to read the text file and give ROOT some usable data.
@@ -92,8 +92,8 @@ std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20
     /// Use this to divide the canvas.
    	//c1->Divide(4,8,0,0);
     TGraphErrors* gr[31]; //= new TGraphErrors();
-    c1->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ChiFitTT.pdf[");
-    for (int i = 0; i < 1; ++i) // East side only for FXT
+    c1->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R21_7p7_COL/ChiFitTT.pdf[");
+    for (int i = 0; i < 2; ++i) // East side only for FXT
     {
       ew = i;
       for (int j = 0; j < 12; ++j)
@@ -167,11 +167,11 @@ std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20
           pt->SetFillColor(0);
           TText *pt_LaTex = pt->AddText(Form("EW%i_PP%i_TT%i",ew,pp,tt));
           pt->Draw();
-          c1->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ChiFitTT.pdf");
+          c1->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R21_7p7_COL/ChiFitTT.pdf");
  	   	  }
       }
     }
-  c1->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ChiFitTT.pdf]");
+  c1->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R21_7p7_COL/ChiFitTT.pdf]");
 
     /// Now to plot the chi2/ndf for each tile.
     TCanvas *c2 = new TCanvas("c2","Average per Tile",490,175,1332,799);
@@ -179,8 +179,8 @@ std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20
     sg = new TGraphErrors();
     Double_t cAve[31];
     Double_t cAveErr[31];
-    c2->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ChiFitSS.pdf[");
-    for (int i = 0; i < 1; ++i) // only East side
+    c2->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R21_7p7_COL/ChiFitSS.pdf[");
+    for (int i = 0; i < 2; ++i) // only East side
     {
         ew = i;
         for (int j = 0; j < 12; ++j)
@@ -206,8 +206,8 @@ std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20
           st->SetFillColor(0);
           TText *st_LaTex = st->AddText(Form("EW%i_PP%i",ew,pp));
           st->Draw();
-          c2->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ChiFitSS.pdf");
+          c2->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R21_7p7_COL/ChiFitSS.pdf");
         }
     }
-  c2->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ChiFitSS.pdf]");
+  c2->SaveAs("/mnt/c/Users/pjska/github/EpdCalibration/result_R21_7p7_COL/ChiFitSS.pdf]");
 }
