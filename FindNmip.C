@@ -53,7 +53,7 @@ void FindNmip(int run=66){
   theCanvas->SaveAs(
         Form("ADCspectraDay%d.pdf[",run));
   TFile* in = new TFile(Form(
-            "./Histrograms_R21_7p7_COL/days/%d.root",run),"READ");
+            "./Day%d.root",run),"READ");
 
   for (int ew=0; ew<2; ew++){ // only East side need to be calibrated for FXT
     for (int PP=1; PP<13; PP++){
