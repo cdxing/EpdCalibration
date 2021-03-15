@@ -1,11 +1,10 @@
 #!/bin/bash
-root -q -l -b "FindNmip.C(22038)" &
-root -q -l -b "FindNmip.C(22039)" &
-root -q -l -b "FindNmip.C(22040)" &
-root -q -l -b "FindNmip.C(22041)" &
-root -q -l -b "FindNmip.C(22042)" &
-root -q -l -b "FindNmip.C(22043)" &
-root -q -l -b "FindNmip.C(22044)" &
+root -q -l -b "FindNmip.C(67)" &
+root -q -l -b "FindNmip.C(68)" &
+root -q -l -b "FindNmip.C(69)" &
+root -q -l -b "FindNmip.C(70)" &
+root -q -l -b "FindNmip.C(71)" &
+root -q -l -b "FindNmip.C(72)" &
 
 wait
 # Don't forget to chmod +x FindNmip.sh.
