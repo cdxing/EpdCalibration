@@ -60,7 +60,7 @@ void FindNmipFix(){
     func->SetLineWidth(3);
 
     TFile* in = new TFile(Form(
-              "./Histrograms_R20_7p7_FXT/st_physics_adc_%d_raw.picoDst.root",run),"READ");
+              "./Day%d.root",run),"READ");
 
 /// Here's where we fix each tile.
     bool ewQuit = 0;
