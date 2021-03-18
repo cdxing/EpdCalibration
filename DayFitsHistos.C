@@ -27,7 +27,7 @@ Date: Nov. 23, 2020
 #include "TMath.h"
 #include "TTree.h"
 
-void DayFitsHistos(const Char_t *inFile = "NmipConstantAll_R20_7p7_Fxt_index.txt")
+void DayFitsHistos(const Char_t *inFile = "NmipConstantsDays66_72.txt")
 {
 
 /// This is what I'll want to do for saving; I need to define day.
@@ -65,7 +65,7 @@ int runTotal = 4464*(days)/2;
 double data[runTotal];
 Double_t nMipADC[days][2][12][31];
 Double_t nMipError[days][2][12][31];
-std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/Nmip_Day_%d.txt",dayStart),ofstream::out);
+std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/Nmip_Day_%d.txt",dayStart),ofstream::out);
 //double data[4464];
 
 /// This bit of code is to read the text file and give ROOT some usable data.
