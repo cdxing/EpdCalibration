@@ -5,83 +5,98 @@
 # from across the runs. This program takes two arguments:
 # Argument 1 is the day to run analysis on, or the first day in a range of days;
 # Argument 2, if supplied, is the last day in a range of days to do analysis on.
-
-	#This is where the data is within /star/dataXX/
-	Directory="reco/production_7p7GeV_2021/ReversedFullField/dev/2021/"
+# import from Erik Loyd's code at /star/u/eloyd/Documents/EPD_Calibration
+        #This is where the data is within /star/dataXX/
+        Directory="reco/production_7p7GeV_2021/ReversedFullField/dev/2021/"
 
     #This is argument 1, if supplied
-	daystart=52 #default
-	if [ $# -ge 1 ]
-	then
-		daystart=$1
-	fi
+        daystart=94 #default
+        if [ $# -ge 1 ]
+        then
+                daystart=$1
+        fi
 
     #This is argument 2, if supplied
-	dayend=daystart
-	if [ $# -ge 2 ]
-	then
-		dayend=$2
-	fi
+        dayend=daystart
+        if [ $# -ge 2 ]
+        then
+                dayend=$2
+        fi
 
-	for (( day = daystart; day <= dayend; day++ )); do
-		Day=$day
+        for (( day = daystart; day <= dayend; day++ )); do
+                Day=$day
 
-		#Fix day for output
-		if [ "$day" -lt 100 ]
-		then
-			Day=0$day
-		fi
+                #Fix day for output
+                if [ "$day" -lt 100 ]
+                then
+                        Day=0$day
+                fi
 
 
-		#Make directories if they don't exist already
-		mkdir -p Day$day/{data09,data10,data11,data12}
+                #Make directories if they don't exist already
+                mkdir -p Day$day/{raw_files,run_files}
 
-		wait
 
-		for i in /star/data09/$Directory$Day/*; do
-			for j in $i/st_physics*.picoDst.root; do
-				root -q -l -b "RunAnalysis.C("\""$j"\"")"
-			done
-		done
+                for i in /star/data09/$Directory$Day/*; do
+                        for j in $i/st_physics*.picoDst.root; do
+                                root -q -l -b "RunAnalysis.C("\""$j"\"")" &
+                        done
 
-		mv Day$day/st_physics*.picoDst.root Day$day/data09/
+                        wait
 
-		for i in /star/data10/$Directory$Day/*; do
-			for j in $i/st_physics*.picoDst.root; do
-				root -q -l -b "RunAnalysis.C("\""$j"\"")"
-			done
-		done
+                        run=${i:((${#i}-8)):8}
+                        mkdir -p Day$day/raw_files/$run
+                        mv Day$day/st_physics*.picoDst.root Day$day/raw_files/$run
+                done
 
-		mv Day$day/st_physics*.picoDst.root Day$day/data10/
+                for i in /star/data10/$Directory$Day/*; do
+                        for j in $i/st_physics*.picoDst.root; do
+                                root -q -l -b "RunAnalysis.C("\""$j"\"")" &
+                        done
 
-		for i in /star/data11/$Directory$Day/*; do
-			for j in $i/st_physics*.picoDst.root; do
-				root -q -l -b "RunAnalysis.C("\""$j"\"")"
-			done
-		done
+                        wait
 
-		mv Day$day/st_physics*.picoDst.root Day$day/data11/
+                        run=${i:((${#i}-8)):8}
+                        mkdir -p Day$day/raw_files/$run
+                        mv Day$day/st_physics*.picoDst.root Day$day/raw_files/$run
+                done
 
-		for i in /star/data12/$Directory$Day/*; do
-			for j in $i/st_physics*.picoDst.root; do
-				root -q -l -b "RunAnalysis.C("\""$j"\"")"
-			done
-		done
+                for i in /star/data11/$Directory$Day/*; do
+                        for j in $i/st_physics*.picoDst.root; do
+                                root -q -l -b "RunAnalysis.C("\""$j"\"")" &
+                        done
 
-		mv Day$day/st_physics*.picoDst.root Day$day/data12/
+                        wait
 
-		wait
+                        run=${i:((${#i}-8)):8}
+                        mkdir -p Day$day/raw_files/$run
+                        mv Day$day/st_physics*.picoDst.root Day$day/raw_files/$run
+                done
 
-		hadd -f ./Day$day/Day$day.data09.root ./Day$day/data09/*.root
-		hadd -f ./Day$day/Day$day.data10.root ./Day$day/data10/*.root
-		hadd -f ./Day$day/Day$day.data11.root ./Day$day/data11/*.root
-		hadd -f ./Day$day/Day$day.data12.root ./Day$day/data12/*.root
+                for i in /star/data12/$Directory$Day/*; do
+                        for j in $i/st_physics*.picoDst.root; do
+                                root -q -l -b "RunAnalysis.C("\""$j"\"")" &
+                        done
 
-		wait
+                        wait
 
-		hadd -f Day$day.root ./Day$day/Day$day.data*.root # Combine seperate data files
+                        run=${i:((${#i}-8)):8}
+                        mkdir -p Day$day/raw_files/$run
+                        mv Day$day/st_physics*.picoDst.root Day$day/raw_files/$run
+                done
 
-	done
+                wait
+
+                for i in ./Day$day/raw_files/*; do
+                        hadd -f ./Day$day/run_files/${i:((${#i}-8)):8}.picoDst.root $i/st_physics*.root &
+                done
+
+                wait
+                hadd -f Day$day.root ./Day$day/run_files/*.root # Combine seperate data files
+
+                cp Day$day.root ./Day$day/Day$day.root
+
+        done
 
 
 # Don't forget to: chmod +x RunAnalysis.sh.
