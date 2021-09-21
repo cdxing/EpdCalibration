@@ -55,8 +55,8 @@ void FindNmip(int run=66){
   TFile* in = new TFile(Form(
             "./Day%d.root",run),"READ");
 
-  for (int ew=0; ew<2; ew++){ // only East side need to be calibrated for FXT
-    for (int PP=1; PP<13; PP++){
+  for (int ew=0; ew<1; ew++){ // only East side need to be calibrated for FXT
+    for (int PP=1; PP<3; PP++){
       int iPad=0;
       theCanvas->cd(++iPad);
       TPaveText* label = new TPaveText(0.2,0.3,0.8,0.9);
@@ -82,7 +82,7 @@ void FindNmip(int run=66){
           /// be where the first peak is.
           /// -sk
         	if (TT<10){         // QT32C
-        	  FitRangeLow=80;//100;//80;
+        	  FitRangeLow=100;//100;//80;
         	  FitRangeHigh=16384;
         	  SingleMipPeakStartingValue=150;//115;//140;//115;
         	  MaxPlot=600;

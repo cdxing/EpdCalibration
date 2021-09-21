@@ -7,10 +7,10 @@
 # Argument 2, if supplied, is the last day in a range of days to do analysis on.
 # import from Erik Loyd's code at /star/u/eloyd/Documents/EPD_Calibration
         #This is where the data is within /star/dataXX/
-        Directory="reco/production_7p7GeV_2021/ReversedFullField/dev/2021/"
+        Directory="reco/production_dAu200_2021/ReversedFullField/dev/2021/"
 
     #This is argument 1, if supplied
-        daystart=94 #default
+        daystart=178 #default
         if [ $# -ge 1 ]
         then
                 daystart=$1
