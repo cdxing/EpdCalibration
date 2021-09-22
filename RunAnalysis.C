@@ -137,14 +137,14 @@ void RunAnalysis(const Char_t *inFile =
 
     //hRefMult->Fill( event->refMult() );
 
-    if (TMath::Abs(event->primaryVertex().z()-0.0) > 70.0 )
+    if (TMath::Abs(event->primaryVertex().z()-200.0) > 5.0 )
     {
      continue;
     }
 
     if (TMath::Abs( sqrt(pow(event->primaryVertex().x(),2) +
 
-      pow(event->primaryVertex().y(),2))) > 2.0 )
+      pow(event->primaryVertex().y()+2.0,2))) > 2.0 )
     {
       continue;
     }
