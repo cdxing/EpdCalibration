@@ -98,12 +98,21 @@ void RunAnalysis(const Char_t *inFile =
 
   /// 1D histograms for ADC distributions
   TH1D *mAdcDists[2][12][31]; // [ew][pp][tt]
+  TProfile *ADCrunbyrun[2][12][31]; // [ew][pp][tt]
+  TProfile *nMIPrunbyrun[2][12][31]; // [ew][pp][tt]
+  TProfile *ratiorunbyrun[2][12][31]; // [ew][pp][tt]
 
   for (int ew=0; ew<2; ew++){
     for (int pp=1; pp<13; pp++){
       for (int tt=1; tt<32; tt++){
-    mAdcDists[ew][pp-1][tt-1]  = new TH1D(Form("AdcEW%dPP%dTT%d",ew,pp,tt),
-      Form("AdcEW%dPP%dTT%d",ew,pp,tt),4096,0,4096);
+        TString HistName = Form("AdcEW%dPP%dTT%d",ew,pp,tt);
+        mAdcDists[ew][pp-1][tt-1]  = new TH1D(HistName.Data(),HistName.Data(),4096,0,4096);
+        HistName = Form("AdcRunByRunEW%dPP%dTT%d",ew,pp,tt);
+        ADCrunbyrun[ew][pp-1][tt-1]  = new TProfile(HistName.Data(),HistName.Data(),60000,20094047,20154047);
+        HistName = Form("nMIPEW%dPP%dTT%d",ew,pp,tt);
+        nMIPrunbyrun[ew][pp-1][tt-1]  = new TProfile(HistName.Data(),HistName.Data(),60000,20094047,20154047);
+        HistName = Form("ratioEW%dPP%dTT%d",ew,pp,tt);
+        ratiorunbyrun[ew][pp-1][tt-1]  = new TProfile(HistName.Data(),HistName.Data(),60000,20094047,20154047);
       }
     }
   }
@@ -176,14 +185,18 @@ void RunAnalysis(const Char_t *inFile =
     TClonesArray *mEpdHits = dst->picoArray(8);
     //cout << mEpdHits->GetEntries()<<endl;
     StPicoEpdHit* epdHit;
-
+    int mRunId = event->runId();
     for (int hit=0; hit<mEpdHits->GetEntries(); hit++){
       epdHit = (StPicoEpdHit*)((*mEpdHits)[hit]);
       int ew = (epdHit->id()<0)?0:1;
       int pp = epdHit->position();
       int tt = epdHit->tile();
       double adc = epdHit->adc();
+      double nMIP = epdHit->nMIP();
       mAdcDists[ew][pp-1][tt-1]->Fill(adc);
+      ADCrunbyrun[ew][pp-1][tt-1]->Fill(mRunId,adc);
+      nMIPrunbyrun[ew][pp-1][tt-1]->Fill(mRunId,nMIP);
+      ratiorunbyrun[ew][pp-1][tt-1]->Fill(mRunId,(double)adc/nMIP);
     }
 
 
@@ -191,7 +204,24 @@ void RunAnalysis(const Char_t *inFile =
 
   picoReader->Finish();
   //std::cout<<"test 4" <<std::endl;
+  TString append = "_EPD_QA.root"
+  TFile *MyFile = TFile::Open(JobIdName+append,"RECREATE");
+  MyFile->cd();
 
+  for (int ew=0; ew<2; ew++){
+  for (int pp=1; pp<13; pp++){
+    for (int tt=1; tt<32; tt++){
+  mAdcDists[ew][pp-1][tt-1]->Write();
+  ADCrunbyrun[ew][pp-1][tt-1]->Write();
+  nMIPrunbyrun[ew][pp-1][tt-1]->Write();
+  ratiorunbyrun[ew][pp-1][tt-1]->Write();
+    }
+  }
+}
+
+MyFile->Close();
+
+/*
   if (Tacos < 100)
   {
     // TString pathSave = Form("./Day%d/",Tacos);
@@ -231,7 +261,7 @@ void RunAnalysis(const Char_t *inFile =
   MyFile->Close();
 
   }
-
+*/
   std::cout << "<burp> Ahhhh. All done; thanks!" << std::endl;
 }
 // This macro make 744 histograms of ADC vs counts
