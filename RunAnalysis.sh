@@ -7,7 +7,7 @@
 # Argument 2, if supplied, is the last day in a range of days to do analysis on.
 # import from Erik Loyd's code at /star/u/eloyd/Documents/EPD_Calibration
         #This is where the data is within /star/dataXX/
-        Directory="reco/production_31GeV_fixedTarget_2019/ReversedFullField/P21ic_calib/2019/"
+        Directory="reco/production_14p5GeV_2019/ReversedFullField/P21ic/2019/"
 
     #This is argument 1, if supplied
         daystart=189 #default
@@ -37,7 +37,7 @@
                 mkdir -p Day$day/{raw_files,run_files}
 
 
-                for i in /star/data100/$Directory$Day/*; do
+                for i in /star/data94/$Directory$Day/*; do
                         for j in $i/st_physics*.picoDst.root; do
                                 root -q -l -b "RunAnalysis.C("\""$j"\"")" &
                         done

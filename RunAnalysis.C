@@ -44,7 +44,8 @@ R__LOAD_LIBRARY(libStPicoDst)
 */
 //_________________
 void RunAnalysis(const Char_t *inFile =
-  "./data/production_31p2GeV_fixedTarget_2020/ReversedFullField/dev/2020/028/st_physics_adc_21028011_raw.picoDst.root") {
+  "./data/production_31p2GeV_fixedTarget_2020/ReversedFullField/dev/2020/028/st_physics_adc_21028011_raw.picoDst.root",
+  TString JobIdName) {
 
   // try another way to load libraries
   gSystem->Load("StRoot/StPicoEvent/libStPicoDst.so");
