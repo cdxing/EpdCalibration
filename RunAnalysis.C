@@ -45,7 +45,7 @@ R__LOAD_LIBRARY(libStPicoDst)
 //_________________
 void RunAnalysis(const Char_t *inFile =
   "./data/production_31p2GeV_fixedTarget_2020/ReversedFullField/dev/2020/028/st_physics_adc_21028011_raw.picoDst.root",
-  TString JobIdName) {
+  TString JobIdName = "test") {
 
   // try another way to load libraries
   gSystem->Load("StRoot/StPicoEvent/libStPicoDst.so");
@@ -194,9 +194,10 @@ void RunAnalysis(const Char_t *inFile =
 
   if (Tacos < 100)
   {
-    TString pathSave = Form("./Day%d/",Tacos);
-
-    TFile *MyFile = TFile::Open(pathSave+Queso2,"RECREATE"); // "Day168st_mtd_19168038_raw_4000002.picoDst.root"
+    // TString pathSave = Form("./Day%d/",Tacos);
+    // TFile *MyFile = TFile::Open(pathSave+Queso2,"RECREATE");
+    TString append = "_EPD_QA.root"
+    TFile *MyFile = TFile::Open(JobIdName+append,"RECREATE");
     MyFile->cd();
 
     for (int ew=0; ew<2; ew++){
@@ -213,8 +214,10 @@ void RunAnalysis(const Char_t *inFile =
   }
   else
   {
-    TString pathSave = Form("./Day%d/",Tacos);
-    TFile *MyFile = TFile::Open(pathSave+Queso2,"RECREATE");
+    // TString pathSave = Form("./Day%d/",Tacos);
+    // TFile *MyFile = TFile::Open(pathSave+Queso2,"RECREATE");
+    TString append = "_EPD_QA.root"
+    TFile *MyFile = TFile::Open(JobIdName+append,"RECREATE");
     MyFile->cd();
 
     for (int ew=0; ew<2; ew++){
