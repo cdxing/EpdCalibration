@@ -204,7 +204,7 @@ void RunAnalysis(const Char_t *inFile =
 
   picoReader->Finish();
   //std::cout<<"test 4" <<std::endl;
-  TString append = "_EPD_QA.root"
+  TString append = "_EPD_QA.root";
   TFile *MyFile = TFile::Open(JobIdName+append,"RECREATE");
   MyFile->cd();
 

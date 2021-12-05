@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
- <job minFilesPerProcess="5" maxFilesPerProcess="100" filesPerHour="10" simulateSubmission="false" fileListSyntax="xrootd">
+ <job inputOrder="runnumber" splitBy="runnumber" maxFilesPerProcess="100" filesPerHour="10" simulateSubmission="false" fileListSyntax="xrootd">
 
  <stdout discard="true" />
 
  <command>
    setenv NODEBUG yes
-   <!--starver SL21c
-   cat $FILELIST | grep -v "root://" > mynewile.list
+   starver SL21c
+   <!-- cat $FILELIST | grep -v "root://" > mynewile.list
    setenv FILELIST mynewile.list-->
    root4star -l -q -b RunAnalysis.C\(\"$FILELIST\",\"$JOBID\"\) &gt;&amp; ${JOBID}.log
  </command>
@@ -20,17 +20,18 @@
    </Package>
   </SandBox>
 
-  <input URL="catalog:star.bnl.gov?eroduction=P21ic,filetype=daq_reco_picoDst,trgsetupname=production_14p5GeV_2019,filename~st_physics,sanity=1,storage!=hpss" nFiles="all"/>
-  <stdout URL="file:/star/data01/pwg/dchen/Ana/14p5GeV/epd_ep/EpdEp/out/$JOBID.out"/>
-  <stderr URL="file:/star/data01/pwg/dchen/Ana/14p5GeV/epd_ep/EpdEp/err/$JOBID.err"/>
+  <!--<input URL="filelist:/star/u/dchen/service/14p5GeV_2019/EpdCalibration/file.list" nFiles="all" />-->
+  <input URL="catalog:star.bnl.gov?production=P21ic,filetype=daq_reco_picoDst,trgsetupname=production_14p5GeV_2019,filename~st_physics,sanity=1,storage=local" nFiles="all"/>
+  <stdout URL="file:/star/data01/pwg/dchen/service/14p5GeV_2019/out/$JOBID.out"/>
+  <stderr URL="file:/star/data01/pwg/dchen/service/14p5GeV_2019/err/$JOBID.err"/>
 
 
-  <output fromScratch="*.root" toURL="/star/data01/pwg/dchen/Ana/14p5GeV/epd_ep/EpdEp/production/" />
-  <output fromScratch="*.log" toURL="/star/data01/pwg/dchen/Ana/14p5GeV/epd_ep/EpdEp/log/" />
+  <output fromScratch="*.root" toURL="/star/data01/pwg/dchen/service/14p5GeV_2019/production/" />
+  <output fromScratch="*.log" toURL="/star/data01/pwg/dchen/service/14p5GeV_2019/log/" />
 
   <Generator>
-    <Location>/star/data01/pwg/dchen/Ana/14p5GeV/epd_ep/EpdEp/list/</Location>
-    <ReportLocation>/star/data01/pwg/dchen/Ana/14p5GeV/epd_ep/EpdEp/report/</ReportLocation>
+	  <Location>/star/data01/pwg/dchen/service/14p5GeV_2019/list/</Location>
+	  <ReportLocation>/star/data01/pwg/dchen/service/14p5GeV_2019/report/</ReportLocation>
   </Generator>
 
 </job>
