@@ -1,14 +1,22 @@
 #!/bin/bash
-root -q -l -b "FindNmipTest.C(157)" &
-root -q -l -b "FindNmipTest.C(159)" &
-root -q -l -b "FindNmipTest.C(160)" &
-root -q -l -b "FindNmipTest.C(161)" &
-root -q -l -b "FindNmipTest.C(164)" &
-root -q -l -b "FindNmipTest.C(165)" &
-root -q -l -b "FindNmipTest.C(166)" &
-root -q -l -b "FindNmipTest.C(167)" &
-root -q -l -b "FindNmipTest.C(172)" &
-root -q -l -b "FindNmipTest.C(173)" &
+#This is argument 1, if supplied
+daystart=178 #default
+if [ $# -ge 1 ]
+then
+        daystart=$1
+fi
+
+#This is argument 2, if supplied
+dayend=daystart
+if [ $# -ge 2 ]
+then
+        dayend=$2
+fi
+
+for (( day = daystart; day <= dayend; day++ )); do
+        root -q -l -b "FindNmipTest.C($day)" &
+
+done
 
 wait
 # Don't forget to chmod +x FindNmip.sh.

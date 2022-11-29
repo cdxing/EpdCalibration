@@ -5,14 +5,14 @@ TF1* MipPeak[nMipsMax]; // three MipPeak TF1
 Double_t myfunc(Double_t* x, Double_t* param);  // Fit Function used by Minuit
 
 
-void FindNmip(int run=66){
+void FindNmip(int day=66){
 
   gStyle->SetOptStat(0);
 
   gStyle->SetTitleSize(0.2,"t");
 
   std::ofstream NmipFile(Form(
-    "NmipConstantsDay%d.txt",run),ofstream::out);
+    "./production/NmipConstantsDay%d.txt",day),ofstream::out);
 
   Float_t SingleMipPeakStartingValue,FitRangeLow,FitRangeHigh;
   FitRangeHigh               = 700.0;  // high edge of range along the x-axis
@@ -37,7 +37,7 @@ void FindNmip(int run=66){
   func->SetParameter(nMipsMax+1,0.15);
   //func->SetParLimits(nMipsMax+1,0.13,0.175);
   // usually I don't set limits, but this should be okay.
-  /// **We were having some issues running up against the limits,
+  /// **We were having some issues dayning up against the limits,
   /// so I commented that portion out. Add this back if
   /// you have trouble making things fit.** sk
   // ------------------------------------------------------------------
@@ -51,16 +51,16 @@ void FindNmip(int run=66){
   TCanvas* theCanvas = new TCanvas("ADCs","ADCs",1400,2400);
   theCanvas->Divide(4,8);
   theCanvas->SaveAs(
-        Form("ADCspectraDay%d.pdf[",run));
+        Form("./production/ADCspectraDay%d.pdf[",day));
   TFile* in = new TFile(Form(
-            "./Day%d.root",run),"READ");
+            "./data/Day%d.root",day),"READ");
 
-  for (int ew=0; ew<1; ew++){ // only East side need to be calibrated for FXT
-    for (int PP=1; PP<3; PP++){
+  for (int ew=0; ew<2; ew++){ // only East side need to be calibrated for FXT
+    for (int PP=1; PP<13; PP++){
       int iPad=0;
       theCanvas->cd(++iPad);
       TPaveText* label = new TPaveText(0.2,0.3,0.8,0.9);
-      label->AddText(Form("Run %d",run));
+      label->AddText(Form("Run %d",day));
       label->AddText(Form("%s PP%2d",EWstring[ew].Data(),PP)); //supersector
       label->Draw();
         for (int TT=1; TT<32; TT++){
@@ -82,15 +82,15 @@ void FindNmip(int run=66){
           /// be where the first peak is.
           /// -sk
         	if (TT<10){         // QT32C
-        	  FitRangeLow=100;//100;//80;
+        	  FitRangeLow=80;//100;//80;
         	  FitRangeHigh=16384;
-        	  SingleMipPeakStartingValue=150;//115;//140;//115;
+        	  SingleMipPeakStartingValue=110;//115;//140;//115;
         	  MaxPlot=600;
         	}
         	else{               // QT32B
          	   FitRangeLow=60;//75;//60;
          	   FitRangeHigh=16384;
-        	   SingleMipPeakStartingValue=110;//85;//110;//80;
+        	   SingleMipPeakStartingValue=84;//85;//110;//80;
         	   MaxPlot=400;
 
         	}
@@ -109,7 +109,7 @@ void FindNmip(int run=66){
         	Float_t nMipFound = func->GetParameter(nMipsMax);
         /// We should probably include some errors in here. sk
           Float_t nMipError = func->GetParError(nMipsMax);
-        	NmipFile << Form("%d \t%d \t%d \t%d \t%f \t%f",run,ew,PP,TT,nMipFound,nMipError);
+        	NmipFile << Form("%d \t%d \t%d \t%d \t%f \t%f",day,ew,PP,TT,nMipFound,nMipError);
         	if (FitStatus!=0) NmipFile << "\t <---------------- Fit failed";
         	else if (fabs(nMipFound-SingleMipPeakStartingValue)>15) NmipFile <<
                     "\t <---------- different from nominal";
@@ -137,13 +137,13 @@ void FindNmip(int run=66){
 
         }
       theCanvas->SaveAs(
-        Form("ADCspectraDay%d.pdf",run));
+        Form("./production/ADCspectraDay%d.pdf",day));
       label->Delete();
     }
   }
   in->Close();
   theCanvas->SaveAs(
-    Form("ADCspectraDay%d.pdf]",run));
+    Form("./production/ADCspectraDay%d.pdf]",day));
   NmipFile.close();
 }
 

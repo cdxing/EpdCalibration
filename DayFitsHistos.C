@@ -39,11 +39,12 @@ Double_t tAveErr[2][12][31];
 Double_t tChi2[2][12][31];
 Int_t day, ew, pp, tt, days, total;
 Double_t adc, err, ey;
-int runStart = 1;
-int runEnd = 36;
-int dayStart = 1;
-int dayEnd = 36;
+int runStart = 344;
+int runEnd = 365;
+int dayStart = 344;
+int dayEnd = 365;
 int daysUsed = dayEnd-dayStart+1;
+std::cout << "test 1" << std::endl;
 // if ((dayStart>109)&&(dayStart<116))
 // {
 //   daysUsed += 1;
@@ -61,11 +62,13 @@ int daysUsed = dayEnd-dayStart+1;
 //   daysUsed -= 2;
 // }
 days = runEnd-runStart+1;
-int runTotal = 4464*(days)/2;
+//int runTotal = 4464*(days)/2;// only east
+int runTotal = 4464*(days);
 double data[runTotal];
 Double_t nMipADC[days][2][12][31];
 Double_t nMipError[days][2][12][31];
-std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/Nmip_Day_%d.txt",dayStart),ofstream::out);
+std::ofstream NmipFile(Form("/mnt/c/Users/pjska/service/2020_11p5GeV/EpdCalibration/result/Nmip_Day_%d.txt",dayStart),ofstream::out);
+std::cout << "test 2" << std::endl;
 //double data[4464];
 
 /// This bit of code is to read the text file and give ROOT some usable data.
@@ -93,6 +96,7 @@ std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/Nmip_Day_%
       //   day = (int) data[i]-2;
       // }
       day = (int) data[i];
+std::cout << "test 2.1" << std::endl;
 
 
       ew = (int) data[i+1];
@@ -101,18 +105,23 @@ std::ofstream NmipFile(Form("/mnt/c/Users/pjska/github/EpdCalibration/Nmip_Day_%
       adc = data[i+4];
       err = data[i+5];
       ey = 0;
+std::cout << "test 2.2" << std::endl;
       // if((day == 172)||(day == 173))
       // {
       //   std::cout << "adc = " << adc << std::endl;
       // }
       nMipADC[day-runStart][ew][pp-1][tt-1] = adc;
+std::cout << "test 2.3" << std::endl;
       nMipError[day-runStart][ew][pp-1][tt-1] = err;
+std::cout << "test 2.9" << std::endl;
     }
+std::cout << "test 3" << std::endl;
 
 /// Histograms to show the ADC variance by day/tile.
 TH2D *hADCDelta[24];
 
-for (int i = 0; i < 1; ++i) // only east side
+//for (int i = 0; i < 1; ++i) // only east side
+for (int i = 0; i < 2; ++i) 
 {
   for (int j = 0; j < 12; ++j)
   {
@@ -128,7 +137,8 @@ TCanvas *c1 = new TCanvas("c1","Day vs 1st nMip",490,175,1332,799);
 /// Use this to divide the canvas.
 	//c1->Divide(4,8,0,0);
 TGraphErrors* gr[31]; //= new TGraphErrors();
-for (int i = 0; i < 1; ++i) // only east side
+//for (int i = 0; i < 1; ++i) // only east side
+for (int i = 0; i < 2; ++i) 
 {
   ew = i;
   for (int j = 0; j < 12; ++j)
@@ -150,6 +160,7 @@ for (int i = 0; i < 1; ++i) // only east side
           //   continue;
           // }
           // else if ((day>109)&&(day<116))
+std::cout << "test 4" << std::endl;
           // {
           //   d=day-runStart-1;
           // }
@@ -199,7 +210,8 @@ for (int i = 0; i < 1; ++i) // only east side
 }
 
 /// Loop to fill the histograms.
-for (int i = 0; i < 1; ++i) // only east side
+//for (int i = 0; i < 1; ++i) // only east side
+for (int i = 0; i < 2; ++i) 
 {
   ew = i;
   for (int j = 0; j < 12; ++j)
@@ -255,16 +267,17 @@ for (int i = 0; i < 1; ++i) // only east side
   }
 }
 TCanvas *c2 = new TCanvas("c2","Average per Tile",490,175,1332,799);
-c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ADCDelta_%d_%d.pdf[",dayStart,dayEnd));
-for (int i = 0; i < 1; ++i) // only east side
+c2->SaveAs(Form("/mnt/c/Users/pjska/service/2020_11p5GeV/EpdCalibration/result/ADCDelta_%d_%d.pdf[",dayStart,dayEnd));
+//for (int i = 0; i < 1; ++i) // only east side
+for (int i = 0; i < 2; ++i) 
 {
   for (int j = 0; j < 12; ++j)
   {
     int l = j + i*12;
     hADCDelta[l]->SetStats(kFALSE);
     hADCDelta[l]->Draw("colz");
-    c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ADCDelta_%d_%d.pdf",dayStart,dayEnd));
+    c2->SaveAs(Form("/mnt/c/Users/pjska/service/2020_11p5GeV/EpdCalibration/result/ADCDelta_%d_%d.pdf",dayStart,dayEnd));
   }
 }
-c2->SaveAs(Form("/mnt/c/Users/pjska/github/EpdCalibration/result_R20_7p7_FXT/ADCDelta_%d_%d.pdf]",dayStart,dayEnd));
+c2->SaveAs(Form("/mnt/c/Users/pjska/service/2020_11p5GeV/EpdCalibration/result/ADCDelta_%d_%d.pdf]",dayStart,dayEnd));
 }

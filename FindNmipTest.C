@@ -11,7 +11,7 @@ void FindNmipTest(int day=154){
   gStyle->SetTitleSize(0.2,"t");
 
   std::ofstream NmipFile(Form(
-    "NmipConstantsTestDay%d.txt",day),ofstream::out);
+    "./production_test/NmipConstantsTestDay%d.txt",day),ofstream::out);
 
   Float_t SingleMipPeakStartingValue,FitRangeLow,FitRangeHigh;
   FitRangeHigh               = 1500.0;  // High edge of range along the x-axis.
@@ -45,9 +45,9 @@ void FindNmipTest(int day=154){
   TCanvas* theCanvas = new TCanvas("ADCs","ADCs",1400,2400);
   theCanvas->Divide(4,8);
   theCanvas->SaveAs(
-        Form("ADCspectraTestDay%d.pdf[",day));
+        Form("./production_test/ADCspectraTestDay%d.pdf[",day));
   TFile* in = new TFile(Form(
-            "./NewHitograms/Day%d.root",day),"READ");
+            "./data/Day%d.root",day),"READ");
 
   for (int ew=0; ew<2; ew++){
     for (int PP=1; PP<13; PP++){
@@ -465,13 +465,13 @@ void FindNmipTest(int day=154){
           }
         }
       theCanvas->SaveAs(
-        Form("ADCspectraTestDay%d.pdf",day));
+        Form("./production_test/ADCspectraTestDay%d.pdf",day));
       label->Delete();
     }
   }
   in->Close();
   theCanvas->SaveAs(
-    Form("ADCspectraTestDay%d.pdf]",day));
+    Form("./production_test/ADCspectraTestDay%d.pdf]",day));
   NmipFile.close();
 }
 
