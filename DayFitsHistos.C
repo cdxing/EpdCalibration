@@ -27,7 +27,7 @@ Date: Nov. 23, 2020
 #include "TMath.h"
 #include "TTree.h"
 
-void DayFitsHistos(const Char_t *inFile = "NmipConstantsDays66_72.txt")
+void DayFitsHistos(const Char_t *inFile = "NmipConstantsDays345_365.txt")
 {
 
 /// This is what I'll want to do for saving; I need to define day.
