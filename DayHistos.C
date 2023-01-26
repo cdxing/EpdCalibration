@@ -23,7 +23,7 @@ the days.
 #include "TMath.h"
 #include "TTree.h"
 
-void DayHistos(const Char_t *inFile = "NmipConstantsDays344_365.txt")
+void DayHistos(int dayStart = 1, int dayEnd = 27, const Char_t *inFile = "NmipConstantsDays1_27.txt")
 {
 
 /// This is what I'll want to do for saving; I need to define day.
@@ -35,10 +35,10 @@ Double_t tAveErr[2][12][31];
 Double_t tChi2[2][12][31];
 Int_t day, ew, pp, tt, days, total;
 Double_t adc, err, ey;
-int runStart = 344;
-int runEnd = 365;
-int dayStart = 344;
-int dayEnd = 365;
+int runStart = 41;
+int runEnd = 55;
+//int dayStart = 344;
+//int dayEnd = 365;
 days = runEnd-runStart+1;
 int runTotal = 4464*(days);//only East side
 double data[runTotal];

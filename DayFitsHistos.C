@@ -27,7 +27,7 @@ Date: Nov. 23, 2020
 #include "TMath.h"
 #include "TTree.h"
 
-void DayFitsHistos(const Char_t *inFile = "NmipConstantsDays345_365.txt")
+void DayFitsHistos(int dayStart = 1, int dayEnd = 27, const Char_t *inFile = "NmipConstantsDays1_27.txt")
 {
 
 /// This is what I'll want to do for saving; I need to define day.
@@ -39,12 +39,12 @@ Double_t tAveErr[2][12][31];
 Double_t tChi2[2][12][31];
 Int_t day, ew, pp, tt, days, total;
 Double_t adc, err, ey;
-int runStart = 344;
-int runEnd = 365;
-int dayStart = 344;
-int dayEnd = 365;
+int runStart = 41;
+int runEnd = 55;
+//int dayStart = 344;
+//int dayEnd = 365;
 int daysUsed = dayEnd-dayStart+1;
-std::cout << "test 1" << std::endl;
+//std::cout << "test 1" << std::endl;
 // if ((dayStart>109)&&(dayStart<116))
 // {
 //   daysUsed += 1;
@@ -68,7 +68,7 @@ double data[runTotal];
 Double_t nMipADC[days][2][12][31];
 Double_t nMipError[days][2][12][31];
 std::ofstream NmipFile(Form("/mnt/c/Users/pjska/service/2020_11p5GeV/EpdCalibration/result/Nmip_Day_%d.txt",dayStart),ofstream::out);
-std::cout << "test 2" << std::endl;
+//std::cout << "test 2" << std::endl;
 //double data[4464];
 
 /// This bit of code is to read the text file and give ROOT some usable data.
@@ -96,7 +96,7 @@ std::cout << "test 2" << std::endl;
       //   day = (int) data[i]-2;
       // }
       day = (int) data[i];
-std::cout << "test 2.1" << std::endl;
+//std::cout << "test 2.1" << std::endl;
 
 
       ew = (int) data[i+1];
@@ -105,17 +105,17 @@ std::cout << "test 2.1" << std::endl;
       adc = data[i+4];
       err = data[i+5];
       ey = 0;
-std::cout << "test 2.2" << std::endl;
+//std::cout << "test 2.2" << std::endl;
       // if((day == 172)||(day == 173))
       // {
       //   std::cout << "adc = " << adc << std::endl;
       // }
       nMipADC[day-runStart][ew][pp-1][tt-1] = adc;
-std::cout << "test 2.3" << std::endl;
+//std::cout << "test 2.3" << std::endl;
       nMipError[day-runStart][ew][pp-1][tt-1] = err;
-std::cout << "test 2.9" << std::endl;
+//std::cout << "test 2.9" << std::endl;
     }
-std::cout << "test 3" << std::endl;
+//std::cout << "test 3" << std::endl;
 
 /// Histograms to show the ADC variance by day/tile.
 TH2D *hADCDelta[24];
@@ -160,7 +160,7 @@ for (int i = 0; i < 2; ++i)
           //   continue;
           // }
           // else if ((day>109)&&(day<116))
-std::cout << "test 4" << std::endl;
+//std::cout << "test 4" << std::endl;
           // {
           //   d=day-runStart-1;
           // }
