@@ -1,0 +1,25 @@
+ew,pp,tt,segment_start,segment_end,reason,evidence
+1,3,6,190,190,localized_persistent_regime_boundary_after_day190,Day190 low MPV reproduced by manual fit; 188-189 and 191-206 on higher stable plateau
+1,3,6,191,206,localized_persistent_regime_boundary_after_day190,Day190 low MPV reproduced by manual fit; 188-189 and 191-206 on higher stable plateau
+1,3,7,190,190,localized_persistent_regime_boundary_after_day190,Day190 low MPV reproduced by manual fit; 188-189 and 191-206 on higher stable plateau
+1,3,7,191,206,localized_persistent_regime_boundary_after_day190,Day190 low MPV reproduced by manual fit; 188-189 and 191-206 on higher stable plateau
+1,3,8,190,190,localized_persistent_regime_boundary_after_day190,Day190 low MPV reproduced by manual fit; 188-189 and 191-206 on higher stable plateau
+1,3,8,191,206,localized_persistent_regime_boundary_after_day190,Day190 low MPV reproduced by manual fit; 188-189 and 191-206 on higher stable plateau
+1,3,9,190,190,localized_persistent_regime_boundary_after_day190,Day190 low MPV reproduced by manual fit; 188-189 and 191-206 on higher stable plateau
+1,3,9,191,206,localized_persistent_regime_boundary_after_day190,Day190 low MPV reproduced by manual fit; 188-189 and 191-206 on higher stable plateau
+0,5,10,190,191,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,10,192,206,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,11,190,191,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,11,192,206,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,12,190,191,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,12,192,206,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,13,190,191,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,13,192,206,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,14,190,191,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,14,192,206,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,15,190,191,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,5,15,192,206,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,6,10,190,191,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,6,10,192,206,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,6,11,190,191,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206
+0,6,11,192,206,localized_persistent_change_point_day192,191->192 step 11.7-22.2%; only 8/742 tiles exceed 5%; persists through Day206

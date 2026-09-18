@@ -1,0 +1,199 @@
+day,ew,pp,tt,review_status,action,reason,old_mpv,replacement_mpv,replacement_mpv_error,notes
+193,1,12,1,manual_refit_accepted,replace_daily_observation,automatic_fit_pathological,643294.1,127.180634,0.862202,manual_fit_20260917;mpv_error=0.862202;fit_status=0;chi2_ndf=1.24
+193,1,7,16,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,7,17,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,7,18,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,7,19,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,7,20,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,7,21,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,7,22,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,7,23,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,11,24,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,11,25,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,11,26,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,8.588e21,,,
+193,1,11,27,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,-2.7528e11,,,
+193,1,11,28,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,11,29,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,11,30,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,11,31,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,12,24,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,12,25,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,12,26,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,12,27,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,12,28,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,12,29,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,12,30,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+193,1,12,31,insufficient_statistics,exclude_from_period_fit,sparse_spectrum,,,,
+207,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,dead tile also documented in earlier collaborator QA
+208,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,dead tile also documented in earlier collaborator QA
+207,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,dead tile also documented in earlier collaborator QA
+208,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,dead tile also documented in earlier collaborator QA
+193,1,8,16,sparse_spectrum,exclude_from_period_fit,insufficient_spectrum_statistics,,,,Day193 ROOT entries 31-54; adjacent TT15/TT24 normal ~1e5 entries
+193,1,8,17,sparse_spectrum,exclude_from_period_fit,insufficient_spectrum_statistics,,,,Day193 ROOT entries 31-54; adjacent TT15/TT24 normal ~1e5 entries
+193,1,8,18,sparse_spectrum,exclude_from_period_fit,insufficient_spectrum_statistics,,,,Day193 ROOT entries 31-54; adjacent TT15/TT24 normal ~1e5 entries
+193,1,8,19,sparse_spectrum,exclude_from_period_fit,insufficient_spectrum_statistics,,,,Day193 ROOT entries 31-54; adjacent TT15/TT24 normal ~1e5 entries
+193,1,8,20,sparse_spectrum,exclude_from_period_fit,insufficient_spectrum_statistics,,,,Day193 ROOT entries 31-54; adjacent TT15/TT24 normal ~1e5 entries
+193,1,8,21,sparse_spectrum,exclude_from_period_fit,insufficient_spectrum_statistics,,,,Day193 ROOT entries 31-54; adjacent TT15/TT24 normal ~1e5 entries
+193,1,8,22,sparse_spectrum,exclude_from_period_fit,insufficient_spectrum_statistics,,,,Day193 ROOT entries 31-54; adjacent TT15/TT24 normal ~1e5 entries
+193,1,8,23,sparse_spectrum,exclude_from_period_fit,insufficient_spectrum_statistics,,,,Day193 ROOT entries 31-54; adjacent TT15/TT24 normal ~1e5 entries
+193,1,8,24,manual_refit_accepted,replace_daily_observation,automatic_fit_pathological,4183.641113,132.188126,0.785998,manual_fit_20260917;fit_status=0;chi2_ndf=1.82
+193,1,7,24,manual_refit_accepted,replace_daily_observation,automatic_fit_pathological,114253.4375,136.041840,0.605030,manual_fit_20260917;fit_status=0;chi2_ndf=1.71
+193,1,12,2,manual_refit_accepted,replace_daily_observation,automatic_fit_pathological,4155.458008,130.035950,0.830664,manual_fit_20260917;fit_status=0;chi2_ndf=1.32
+190,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+190,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+191,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+191,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+192,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+192,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+193,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+193,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+194,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+194,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+195,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+195,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+196,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+196,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+197,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+197,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+198,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+198,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+199,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+199,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+200,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+200,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+201,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+201,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+202,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+202,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+203,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+203,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+204,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+204,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+205,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+205,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+206,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+206,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile;automatic_fit_failed_placeholder_135,135.0,,,persistent fit_failed placeholder across period; also documented in collaborator QA
+190,0,1,1,manual_refit_accepted,replace_daily_observation,automatic_fit_pathological,30.02668,112.164169,2.181030,manual_fit_20260917;fit_status=0;chi2_ndf=0.96;fit_start=70;visual_fit_accepted;broad_peak;fit_start_60_to_70_checked;fit_start_80_truncates_peak
+167,1,7,14,manual_refit_accepted,replace_daily_observation,automatic_fit_inconsistent_with_regenerated_spectrum,141.382507,132.324295,0.485768,manual_fit_20260917;fit_status=0;chi2_ndf=2.09;fit_start=70;visual_fit_accepted;regenerated_Day167_root;raw_peak_adc=125.5;neighbor_peaks_TT13_127.5_TT15_124.5;fit_start_60_70_80_90_checked;original_fit_not_supported_by_regenerated_spectrum
+179,0,6,2,manual_refit_accepted,replace_daily_observation,automatic_fit_not_supported_by_manual_refit,105.997108,116.307190,1.289736,manual_fit_20260917;fit_status=0;chi2_ndf=1.07;fit_start=60;visual_fit_accepted;fit_start_50_60_70_stable;fit_start_80_unstable_degraded
+176,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+176,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+177,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+177,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+178,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+178,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+179,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+179,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+180,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+180,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+181,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+181,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+182,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+182,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+211,0,6,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,6,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,6,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,6,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,7,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,7,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,7,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,7,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,7,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,7,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,8,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,8,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,8,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,8,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,8,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,8,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,9,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,9,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,9,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,9,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,9,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,9,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,10,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,10,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,10,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,10,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,10,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,10,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,11,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,11,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,11,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,0,11,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,6,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,6,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,6,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,6,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,7,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,7,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,7,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,7,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,7,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,7,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,8,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,8,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,8,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,8,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,8,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,8,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,9,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,9,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,9,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,9,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,9,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,9,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,10,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,10,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,10,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,10,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,10,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,10,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,11,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,11,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,11,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+212,0,11,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,6,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,6,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,6,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,6,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,7,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,7,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,7,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,7,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,7,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,7,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,8,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,8,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,8,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,8,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,8,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,8,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,9,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,9,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,9,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,9,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,9,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,9,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,10,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,10,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,10,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,10,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,10,14,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,10,15,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,11,10,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,11,11,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,11,12,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+213,0,11,13,raw_data_unavailable,exclude_from_period_fit,zero_entry_raw_histogram,135.0,,,post_gap_unavailable_block;raw_entries=0;verified_Day211_Day212_Day213;no_refit;no_carry_forward
+211,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+211,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+212,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+212,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+213,1,1,6,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+213,1,2,10,known_dead_tile,exclude_from_period_fit,known_dead_tile,135.0,,,persistent_known_dead_tile;exclude_no_carry_forward
+211,1,9,24,manual_refit_accepted,replace_daily_observation,automatic_fit_failed_manual_refit_accepted,4197.634766,140.094299,0.833733,manual_fit_20260917;fit_status=0;chi2_ndf=1.45;fit_start=70;fit_start_70_80_stable;low_adc_cutoff;no_pedestal_shift;offset=0
+211,1,10,17,manual_db_override,exclude_from_period_fit,pedestal_shift_requires_nonzero_offset,-53.373657,,,handled_in_manual_db_calibration_overrides.csv;do_not_use_offset0_daily_observation
+211,1,10,18,manual_db_override,exclude_from_period_fit,pedestal_shift_requires_nonzero_offset,76.599731,,,handled_in_manual_db_calibration_overrides.csv;do_not_use_offset0_daily_observation
+211,1,11,19,manual_db_override,exclude_from_period_fit,pedestal_shift_requires_nonzero_offset,1796.075317,,,handled_in_manual_db_calibration_overrides.csv;do_not_use_offset0_daily_observation
+212,1,10,19,manual_db_override,exclude_from_period_fit,pedestal_shift_requires_nonzero_offset,145.956238,,,handled_in_manual_db_calibration_overrides.csv;do_not_use_offset0_daily_observation

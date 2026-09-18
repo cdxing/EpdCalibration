@@ -194,7 +194,7 @@ daily_all = pd.concat(
 
 
 # Gene's current Run23 analysis range.
-daily_all["in_primary_range"] = daily_all["day"].between(167, 213)
+daily_all["in_primary_range"] = daily_all["day"].between(162, 213)
 
 daily_primary = daily_all[
     daily_all["in_primary_range"]
@@ -373,7 +373,7 @@ manual_refits.to_csv(
 
 print("\n=== DAILY OBSERVATIONS ===")
 print("All rows:", len(daily_all))
-print("Primary 167-213 rows:", len(daily_primary))
+print("Primary 162-213 rows:", len(daily_primary))
 print("Primary days:", daily_primary["day"].nunique())
 
 print("\nRows by source:")
