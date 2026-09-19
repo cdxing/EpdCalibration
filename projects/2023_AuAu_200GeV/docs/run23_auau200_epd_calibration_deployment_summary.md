@@ -158,9 +158,6 @@ Day169: 20230618.40229 -> 20230625.50947
 Day176: 20230625.50947 -> 20230702.44935
 Day183: 20230702.44935 -> 20230708.3035
 Day188: 20230708.3035  -> 20230709.235431
-
-
-
 ```
 
 Representative read-back checks confirmed:
@@ -172,7 +169,21 @@ Representative read-back checks confirmed:
 - the four reviewed offset overrides are preserved;
 - Day211–213 precision-corrected entries contain the expected ROOT float representation of the full-precision source values.
 
-## 8. Deployment history note
+## 8. Calibration sources and contributors
+
+This final calibration and DB deployment builds on and reviews earlier Run23 EPD calibration results produced within the STAR collaboration. Relevant calibration posts and source results include:
+
+- **Yevheniia:** [EPD calibration](https://drupal.star.bnl.gov/STAR/blog/yuno/Epd-calibration) — earlier EPD calibration results used as source/reference input in the reviewed workflow.
+- **Cameron:** [Run-23 EPD Calibrations, Days 169–175](https://drupal.star.bnl.gov/STAR/blog/cracz/Run-23-EPD-Calibrations-days-169-175) — source calibration results for the Days 169–175 period.
+- **Erik:** [Run23 EPD Live Calibration, Days 183–189](https://drupal.star.bnl.gov/STAR/blog/eloyd/Run23-EPD-Live-Calibration-day-183-189) — period-level reference calibration results for Days 183–186 and 188–189.
+
+The final Days 162–213 candidate documented here combines these source results with the reviewed daily fits, QA decisions, manual corrections, DB-state persistence rules, and final DB read-back validation described above.
+
+The final STAR Drupal summary is available at:
+
+[Run23 Au+Au 200 GeV EPD Calibration — DB Deployment Complete](https://drupal.star.bnl.gov/STAR/blog/dchen/Run23-AuAu-200-GeV-EPD-Calibration-%E2%80%94-DB-Deployment-Complete)
+
+## 9. Deployment history note
 
 The Day211–213 calibration was corrected in stages during deployment:
 
@@ -184,7 +195,7 @@ The final v3 Day211–213 gain entries supersede the earlier correction entries.
 
 This history is retained deliberately for provenance rather than deleting the intermediate deployment evidence.
 
-## 9. Reproducibility and archive
+## 10. Reproducibility and archive
 
 Primary local candidate:
 
@@ -216,7 +227,7 @@ SHA256:
 
 The archive contains DB-write logs, read-back evidence, and deployment macros used for the early-period and Day211–213 precision-correction writes.
 
-## 10. Production status
+## 11. Production status
 
 **Run23 Au+Au 200 GeV EPD calibration for Days 162–213 is deployed and DB read-back validated.**
 
