@@ -1,0 +1,2 @@
+rank,priority_tier,day,ew,pp,tt,mpv,mpv_error,auto_flag,reasons,leave_one_out_constant_shift,leave_one_out_pull,source,source_file,input_file,input_line,action
+1,1,169,0,1,7,127.793991,0.988674,not_flagged,large_leave_one_out_pull,0.6805544185105248,6.092286351006312,cracz,NmipConstantsAll169to175.txt,/Users/dchenmac/dchen/service/Run23_live/EpdCalibration-apple/projects/2023_AuAu_200GeV/data/derived/daily_observations_primary.csv,26792,inspect_spectrum_or_provenance; do_not_auto_reject

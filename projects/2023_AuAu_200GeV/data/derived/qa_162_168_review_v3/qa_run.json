@@ -1,0 +1,29 @@
+{
+  "tool_version": "0.1.0",
+  "period": [
+    162,
+    168
+  ],
+  "split_day": null,
+  "daily_rows_in_period": 5208,
+  "daily_rows_outside_period": 26784,
+  "queue_rows": 47,
+  "status_counts": {
+    "provisional": 742,
+    "manual_review": 2
+  },
+  "thresholds": {
+    "adc_threshold": 10.0,
+    "pull_threshold": 6.0,
+    "chi2_threshold": 5.0,
+    "weight_factor": 5.0
+  },
+  "policy": "QA only. Thresholds are triage heuristics, not calibrated significance or acceptance cuts. No calibration release written.",
+  "script_sha256": "0c30deb33060ccebf73e75ec3a5e377f6b38e04b333df255fc23ee831a4033fd",
+  "inputs": [
+    {
+      "path": "/Users/dchenmac/dchen/service/Run23_live/EpdCalibration-apple/projects/2023_AuAu_200GeV/data/derived/daily_observations_primary.csv",
+      "sha256": "7f94bf5ef53609361f6ec85b0325c7531816bb5d5c808eefc5452ebaa199a063"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+day,run_number,run_start_gmt,store_time_gmt,rule,status,notes
+162,24162007,2023-06-11 06:56:46,2023-06-11 06:55:46,first_good_physics_run_start_minus_60s,confirmed,previous physics run 24161042 stopped 2023-06-11 01:11:20 GMT
+169,24169001,2023-06-18 04:03:15,2023-06-18 04:02:29,previous_valid_run_stop_plus_1s,confirmed,previous physics run 24168051 stopped 2023-06-18 04:02:28 GMT
+176,24176004,2023-06-25 05:10:47,2023-06-25 05:09:47,first_good_physics_run_start_minus_60s,confirmed,previous physics run 24175056 stopped 2023-06-25 04:19:09 GMT
+183,24183001,2023-07-02 04:50:31,2023-07-02 04:49:35,previous_valid_run_stop_plus_1s,confirmed,previous physics run 24182050 stopped 2023-07-02 04:49:34 GMT
+188,24188046,2023-07-08 00:31:35,2023-07-08 00:30:35,first_good_physics_run_start_minus_60s,confirmed,previous valid physics run 24186034 stopped 2023-07-05 11:00:38 GMT
+190,24190052,2023-07-09 23:55:01,2023-07-09 23:54:31,between_previous_run_stop_and_new_run_start,confirmed,previous junk run stopped 23:54:16 GMT
+191,24191001,2023-07-10 04:12:30,2023-07-10 04:11:36,previous_valid_run_stop_plus_1s,confirmed,previous physics run stopped 04:11:35 GMT
+192,24192015,2023-07-11 18:06:56,2023-07-11 18:05:56,first_good_physics_run_start_minus_60s,confirmed,
+207,24207051,2023-07-27 00:41:01,2023-07-27 00:40:01,first_good_physics_run_start_minus_60s,confirmed,
+211,24211047,2023-07-30 23:46:11,2023-07-30 23:45:13,v3_precision_correction,confirmed,final v3 gain: preserve Day207 full-precision values for 32 raw-input-unavailable tiles
+212,24212001,2023-07-31 04:06:00,2023-07-31 04:05:02,v3_precision_correction,confirmed,final v3 gain: preserve Day207 full-precision values for 32 raw-input-unavailable tiles
+213,24213004,2023-08-01 05:02:16,2023-08-01 05:01:18,v3_precision_correction,confirmed,final v3 gain: preserve Day207 full-precision values for 32 raw-input-unavailable tiles

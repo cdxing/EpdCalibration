@@ -1,0 +1,3 @@
+start_day,end_day,status,reason,action
+187,187,no_usable_calibration_input,No usable Day187 calibration input,no_new_calibration;previous_DB_state_persists
+209,210,unresolved_input_gap,Day209.root and Day210.root are empty/unusable artifacts,no_new_calibration;previous_DB_state_persists
