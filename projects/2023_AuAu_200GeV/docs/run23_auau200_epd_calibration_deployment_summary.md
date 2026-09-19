@@ -173,7 +173,7 @@ Representative read-back checks confirmed:
 
 This final calibration and DB deployment builds on and reviews earlier Run23 EPD calibration results produced within the STAR collaboration. Relevant calibration posts and source results include:
 
-- **Yevheniia:** [EPD calibration](https://drupal.star.bnl.gov/STAR/blog/yuno/Epd-calibration) — earlier EPD calibration results used as source/reference input in the reviewed workflow.
+- **Yevheniia:** [EPD calibration](https://drupal.star.bnl.gov/STAR/blog/yuno/Epd-calibration) — source calibration results for the Days 162–168 period.
 - **Cameron:** [Run-23 EPD Calibrations, Days 169–175](https://drupal.star.bnl.gov/STAR/blog/cracz/Run-23-EPD-Calibrations-days-169-175) — source calibration results for the Days 169–175 period.
 - **Erik:** [Run23 EPD Live Calibration, Days 183–189](https://drupal.star.bnl.gov/STAR/blog/eloyd/Run23-EPD-Live-Calibration-day-183-189) — period-level reference calibration results for Days 183–186 and 188–189.
 
